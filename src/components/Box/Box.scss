@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.box {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: $color-ui;
+  @include shadow;
+
+  &--transparent {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/_breakpoints.scss';
+
+.column {
+  position: relative;
+  width: 100%;
+  min-height: 1px; // Prevent columns from collapsing when empty
+  padding-right: (24px / 2);
+  padding-left: (24px / 2);
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+  @include media-breakpoint-up($breakpoint, $breakpoints) {
+    // Provide basic `.column_{bp}` classes for equal-width flexbox columns
+    .column#{$infix} {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+    .column#{$infix}-auto {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: none; // Reset earlier grid tiers
+    }
+
+    @for $i from 1 through $columns {
+      .column#{$infix}-#{$i} {
+        @include make-col($i, $columns);
+      }
+    }
+
+    // `$columns - 1` because offsetting by the width of an entire row isn't possible
+    @for $i from 0 through ($columns - 1) {
+      @if not($infix == '' and $i == 0) {
+        // Avoid emitting useless .offset-0
+        .offset#{$infix}-#{$i} {
+          @include make-col-offset($i, $columns);
+        }
+      }
+    }
+  }
+}

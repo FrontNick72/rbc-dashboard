@@ -1,0 +1,83 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.update-user-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 28px 28px;
+  border-bottom: 1px solid $color-border;
+
+  @include breakpoints('1920') {
+    padding: 0 32px 32px;
+  }
+
+  &__groups {
+    margin-bottom: 28px;
+
+    @include breakpoints('1920') {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__group-data {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @include breakpoints('1920') {
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  &__group-name {
+    color: $color-font;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+    font-weight: 500;
+    margin-bottom: 12px;
+
+    @include breakpoints('1920') {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    width: 320px;
+
+    @include breakpoints('1920') {
+      width: 360px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
+
+      @include breakpoints('1920') {
+        margin-right: 20px;
+      }
+    }
+
+    &.input_error {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    padding: 0;
+    width: 190px;
+
+    @include breakpoints('1920') {
+      width: 232px;
+    }
+  }
+}

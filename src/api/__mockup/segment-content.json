@@ -1,0 +1,57 @@
+[
+  {
+    "id": "0",
+    "title": "Обувной ритейл",
+    "checked": true
+  },
+  {
+    "id": "1",
+    "title": "Женская обувь",
+    "checked": false
+  },
+  {
+    "id": "2",
+    "title": "Обувной ритейл",
+    "checked": false
+  },
+  {
+    "id": "3",
+    "title": "Детская обувь",
+    "checked": false
+  },
+  {
+    "id": "4",
+    "title": "Спортивная обувь",
+    "checked": false
+  },
+  {
+    "id": "5",
+    "title": "Специальная обувь",
+    "checked": false
+  },
+  {
+    "id": "6",
+    "title": "Спортивная обувь",
+    "checked": false
+  },
+  {
+    "id": "7",
+    "title": "Специальная обувь",
+    "checked": false
+  },
+  {
+    "id": "8",
+    "title": "Детская обувь",
+    "checked": false
+  },
+  {
+    "id": "9",
+    "title": "Спортивная обувь",
+    "checked": false
+  },
+  {
+    "id": "10",
+    "title": "Женская обувь",
+    "checked": false
+  }
+]

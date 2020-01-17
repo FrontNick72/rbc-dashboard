@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+$scrollbar: '.scrollbar';
+
+.scrollbar {
+  background-color: $color-ui;
+  border-radius: 0;
+  transition: background-color .2s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    z-index: 1;
+  }
+
+  &_vertical {
+    position: absolute;
+    top: 0;
+    background-color: #C4C4C4;
+    width: 4px !important;
+  }
+}

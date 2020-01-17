@@ -1,0 +1,84 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.anons-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 28px;
+  width: 100%;
+
+  &__anonses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__anons {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+}
+
+.anons-block {
+  display: flex;
+  position: relative;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    margin-right: 12px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+
+    .button {
+      padding: 0 14px 0 18px;
+      font-weight: 400;
+      line-height: 14px;
+      white-space: nowrap;
+
+      &__icon {
+        height: 18px;
+        width: 18px;
+
+        @include breakpoints('1920') {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    color: $color-font;
+    font-weight: 400;
+    font-family: 'KazimirTextRBC', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+}

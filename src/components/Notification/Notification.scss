@@ -1,0 +1,21 @@
+.notifications {
+  position: fixed;
+  top: 80px !important;
+  right: 20px !important;
+  width: 288px;
+  z-index: 100;
+
+  &>* {
+    transition: 1s;
+  }
+}
+
+.notify-toast {
+  display: flex !important;
+  align-items: center;
+  min-height: auto !important;
+}
+
+.notify-body {
+  margin: 0 !important
+}

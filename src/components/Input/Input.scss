@@ -1,0 +1,233 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+$input: '.input';
+
+#{$input} {
+  font-family: 'GraphikRBCLC', sans-serif;
+  width: 100%;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 52px;
+  border: 1px solid $color-border;
+  transition: border-color $transition ease-out;
+
+  @include breakpoints('1920') {
+    height: 60px;
+  }
+
+  &_error {
+    border-color: $color-error;
+    margin-bottom: 36px;
+
+    @include breakpoints('1920') {
+      margin-bottom: 44px;
+    }
+  }
+
+  &_focused {
+    outline: none;
+
+    #{$input}__label {
+      font-size: 12px;
+      line-height: 14px;
+      transform: translateY(-18px);
+
+      @include breakpoints('1920') {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  &_theme {
+    &-underline {
+      height: 28px;
+      border-radius: 0;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+
+      #{$input} {
+        &__control {
+          padding: 0 4px;
+        }
+
+        &__label {
+          left: -2px;
+          top: 12px;
+
+          &_floating {
+            transform: translateY(-24px);
+          }
+        }
+
+        &__error {
+          left: 4px;
+          right: 4px;
+        }
+      }
+
+      &#{$input}_focused {
+        #{$input}__label {
+          transform: translateY(-24px);
+        }
+      }
+    }
+
+    &-noborder {
+      border-radius: 0;
+      border-style: none;
+
+      #{$input} {
+        &__control {
+          padding: 0;
+          color: $color-font;
+          font-weight: 500;
+          letter-spacing: -0.4px;
+        }
+
+        &__label {
+          left: 0;
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: -0.7px;
+
+          @include breakpoints('1920') {
+            font-size: 16px;
+            line-height: 20px;
+          }
+
+          &_floating {
+            transform: translateY(-23px);
+          }
+        }
+
+        &__error {
+          left: 4px;
+          right: 4px;
+        }
+      }
+
+      &#{$input}_focused {
+        #{$input}__label {
+          transform: translateY(-34px);
+        }
+      }
+    }
+  }
+
+  &_with-addon {
+    padding-right: 15px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 7px;
+    height: 100%;
+    flex-grow: 1;
+  }
+
+  &__control {
+    color: $color-font;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    padding: 0 14px 0 12px;
+    height: auto;
+    width: 100%;
+    border: none;
+    background: none;
+
+    @include breakpoints('1920') {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &:disabled {
+      color: $color-dark-grey;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__label {
+    padding: 0;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-dark-grey;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.32px;
+    pointer-events: none;
+    transition-property: font-size, transform;
+    transition-duration: 0.225s;
+    transition-timing-function: ease-out;
+    // background-color: $color-base;
+
+    @include breakpoints('1920') {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &_floating {
+      font-size: 12px;
+      line-height: 14px;
+      transform: translateY(-18px);
+
+      @include breakpoints('1920') {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  &__error {
+    position: absolute;
+    left: 11px;
+    right: 11px;
+    top: calc(100% + 6px);
+    color: $color-error;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: -0.28px;
+
+    @include breakpoints('1920') {
+      font-size: 14px;
+      line-height: 16px;
+      top: calc(100% + 8px);
+    }
+  }
+
+  &__toggle-password {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  &__addon_after {
+    display: inline-flex;
+
+    .icon,
+    .button_icon {
+      margin-right: -5px;
+    }
+  }
+}

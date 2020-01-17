@@ -1,0 +1,58 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
+
+.side-search-container {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid $color-border;
+  width: 40%;
+
+  @include breakpoints('1366') {
+    width: auto;
+  }
+
+  &__result-item {
+    cursor: pointer;
+    background-color: #fff;
+    transition: $transition background-color ease;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-border;
+    }
+
+    &:hover {
+      background-color: $color-light-yellow;
+
+      .article-short__bookmark-button {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+
+    &--active {
+      background-color: $color-picked;
+
+      &:hover {
+        background-color: $color-picked;
+      }
+    }
+  }
+
+  &__top-string {
+    display: flex;
+    border-bottom: 1px solid $color-border;
+    padding: 23px 28px 12px;
+  }
+
+  .searchbox {
+    width: 100% !important;
+
+    @include breakpoints('1366') {
+      width: 544px !important;
+    }
+
+    @include breakpoints('1920') {
+      width: 712px !important;
+    }
+  }
+}

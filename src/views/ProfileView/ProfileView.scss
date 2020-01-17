@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins';
+
+.profile-view {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: auto;
+  overflow: auto;
+  width: 100%;
+
+  &__title {
+    margin-right: 24px;
+  }
+
+  &__top-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    padding: 28px 0 0 28px;
+
+    @include breakpoints('1920') {
+      margin-bottom: 28px;
+      padding: 32     px 0 0 32px;
+    }
+  }
+}

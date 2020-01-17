@@ -1,0 +1,119 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  padding: 0 18px;
+  color: $color-font;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid $color-yellow;
+  background-color: transparent;
+  transition: $transition;
+  overflow: hidden;
+  @include font;
+
+  @include breakpoints('1920') {
+    height: 44px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  &__icon {
+    margin-left: 5px;
+  }
+
+  &--ghost {
+    color: $color-font;
+    border-color: transparent;
+
+    &.button--filled {
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &--gray {
+    border-color: $color-border;
+
+    &.button--filled {
+      background-color: $color-border;
+
+      &:hover {
+        background-color: $color-yellow;
+        border-color: $color-yellow;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($color-border, 0.4);
+    }
+  }
+
+  &--yellow-dark {
+    &.button--filled {
+      background-color: $color-accent-active;
+
+      &:hover {
+        background-color: $color-light-yellow;
+        border-color: $color-light-yellow;
+      }
+    }
+
+    &:hover {
+      background-color: $color-light-yellow;
+    }
+
+    &.button:disabled {
+      color: $color-dark-grey;
+      background-color: $color-picked !important;
+      border-color: $color-picked !important;
+    }
+  }
+
+  &--yellow {
+    &.button--filled {
+      background-color: $color-yellow;
+
+      &:hover {
+        background-color: $color-yellow;
+        border-color: $color-yellow;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($color-yellow, 0.4);
+    }
+  }
+
+  &--filled {
+    background-color: $color-yellow;
+
+    &:hover {
+      background-color: $color-yellow;
+      border-color: $color-yellow;
+    }
+  }
+
+  &:disabled {
+    border-color: $color-border !important;
+    background-color: $color-border !important;
+    cursor: not-allowed !important;
+  }
+}

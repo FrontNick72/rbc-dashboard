@@ -1,0 +1,58 @@
+@mixin font() {
+  font-family: GraphikRBCLC;
+}
+
+@mixin shadow() {
+  box-shadow: 0px 2px 12px rgba(34, 34, 34, 0.2);
+}
+
+@mixin make-col($size, $columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+@mixin breakpoints($point) {
+  @if $point == '1920' {
+    @media (min-width: 1920px) {
+      @content
+    }
+  }
+
+  @if $point == '1366' {
+    @media (min-width: 1366px) {
+      @content
+    }
+  }
+
+  @if $point == '1280' {
+    @media (min-width: 1280px) {
+      @content
+    }
+  }
+  @if $point == '1200' {
+    @media (min-width: 1200px) {
+      @content
+    }
+  }
+  @if $point == '1024' {
+    @media (min-width: 1024px) {
+      @content
+    }
+  }
+  @if $point == '768' {
+    @media (min-width: 768px) {
+      @content
+    }
+  }
+
+  @if $point == '375' {
+    @media (min-width: 375px) {
+      @content
+    }
+  }
+}

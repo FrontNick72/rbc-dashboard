@@ -1,0 +1,66 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.article-short {
+  position: relative;
+  padding: 12px 16px;
+  width: 100%;
+
+  &__bookmark-button {
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 21px;
+    opacity: 0;
+    transition: 0.3s opacity ease;
+
+    @include breakpoints('1920') {
+      top: 12px;
+      right: 23px;
+    }
+
+    &--selected {
+      opacity: 1;
+    }
+  }
+
+  &__path {
+    color: $color-dark-grey;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    margin-bottom: 4px;
+    padding-right: 20px;
+
+    @include breakpoints('1920') {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__title {
+    color: $color-font;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    letter-spacing: -0.34px;
+
+    @include breakpoints('1920') {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__text {
+    p {
+      display: inline;
+      margin: 0;
+    }
+  }
+}

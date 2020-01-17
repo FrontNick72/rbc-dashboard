@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$metaScroll: '.meta-scroll';
+
+#{$metaScroll} {
+  &__title {
+    color: $color-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 12px;
+
+    @include breakpoints('1920') {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    span {
+      background-color: $color-picked;
+    }
+  }
+
+  &--fixed {
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+}

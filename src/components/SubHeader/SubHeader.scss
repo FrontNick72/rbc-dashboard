@@ -1,0 +1,26 @@
+ @import '../../styles/variables.scss';
+ @import '../../styles/mixins';
+
+ .sub-header {
+   color: $color-font;
+   font-size: 24px;
+   letter-spacing: -0.5px;
+   font-weight: 500;
+   line-height: 32px;
+   text-decoration: none;
+
+   &:hover {
+     text-decoration: underline;
+   }
+
+   &--not-link {
+     &:hover {
+       text-decoration: none;
+     }
+   }
+
+   @include breakpoints('1920') {
+     font-size: 32px;
+     line-height: 40px;
+   }
+ }

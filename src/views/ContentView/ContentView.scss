@@ -1,0 +1,37 @@
+@import '../../styles/mixins';
+
+.content-view {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  &__content {
+    flex-grow: 1;
+    padding: 28px 34px 28px 28px;
+  }
+}
+
+.content-container-general {
+  display: flex;
+  flex: 1;
+  position: relative;
+
+  &__route-to {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+
+    @include breakpoints('1920') {
+      bottom: 28px;
+    }
+  }
+
+  &--is-search {
+    width: 60%;
+
+    @include breakpoints('1366') {
+      width: auto;
+    }
+  }
+}

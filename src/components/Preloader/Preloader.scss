@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$border-width: 6px;
+
+.preloader {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    position: relative;
+    width: 66px;
+    height: 66px;
+    border: $border-width solid transparentize($color-accent-active, .9);
+    border-radius: 50%;
+    animation: preloader 1s ease infinite ;
+    animation-timing-function: linear;
+  }
+
+  &__runner {
+    position: absolute;
+    top: -$border-width;
+    left: -$border-width;
+    width: calc(50% + #{$border-width});
+    height: calc(50% + #{$border-width});
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      display: block;
+      width: calc(200% - #{$border-width * 2});
+      height: calc(200% - #{$border-width * 2});
+      border: $border-width solid $color-accent-active;
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes preloader {
+  from { transform: rotateZ(0deg) }
+  to { transform: rotateZ(360deg) }
+}

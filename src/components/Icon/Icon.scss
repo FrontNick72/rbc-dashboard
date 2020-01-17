@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$icon: '.icon';
+
+#{$icon} {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: color $transition ease, background-color $transition ease;
+  height: 20px;
+  width: 20px;
+
+  @include breakpoints('1920') {
+    height: 24px;
+    width: 24px;
+  }
+
+  svg {
+    transition: fill $transition ease;
+  }
+
+  &:hover {
+    svg {
+      fill: $color-picked;
+    }
+  }
+
+  &_selected {
+    svg {
+      fill: $color-accent-active;
+    }
+
+    &:hover {
+      svg {
+        fill: $color-accent-active;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+$color-font: #222222;
+$color-ui: #f2f2f2;
+$color-border: #dddddd;
+$color-yellow: #fecd5d;
+$color-light-yellow: #ffeecc;
+$color-dark-grey: #666666;
+$color-dark-grey-2: #C4C4C4;
+$color-accent-active: #FFCC66;
+$color-picked: #FFDD99;
+$color-success: #6CD858;
+$color-error: #FF533D;
+
+$transition: 0.3s;
+
+$columns: 12;
+$breakpoints: (
+  xs: 320px,
+  sm: 768px,
+  md: 1366px,
+  lg: 1920px
+);

@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'GraphikRBCLC';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./GraphikRBCLC/GraphikRBCLC-Regular-Web.eot') format('eot'),
+    url('./GraphikRBCLC/GraphikRBCLC-Regular-Web.woff') format('woff'),
+    url('./GraphikRBCLC/GraphikRBCLC-Regular-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'GraphikRBCLC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./GraphikRBCLC/GraphikRBCLC-Regular-Web.eot') format('eot'),
+    url('./GraphikRBCLC/GraphikRBCLC-Regular-Web.woff') format('woff'),
+    url('./GraphikRBCLC/GraphikRBCLC-Regular-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'GraphikRBCLC';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./GraphikRBCLC-Medium/GraphikRBCLC-Medium-Web.eot') format('eot'),
+    url('./GraphikRBCLC-Medium/GraphikRBCLC-Medium-Web.woff') format('woff'),
+    url('./GraphikRBCLC-Medium/GraphikRBCLC-Medium-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'GraphikRBCLC';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./GraphikRBCLC-Medium/GraphikRBCLC-Medium-Web.eot') format('eot'),
+    url('./GraphikRBCLC-Medium/GraphikRBCLC-Medium-Web.woff') format('woff'),
+    url('./GraphikRBCLC-Medium/GraphikRBCLC-Medium-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'GraphikRBCLC';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./GraphikRBCLC-Semibold/GraphikRBCLC-Semibold-Web.eot') format('eot'),
+    url('./GraphikRBCLC-Semibold/GraphikRBCLC-Semibold-Web.woff') format('woff'),
+    url('./GraphikRBCLC-Semibold/GraphikRBCLC-Semibold-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'KazimirTextRBC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./KazimirTextRBC/KazimirTextRBC-Regular.eot') format('eot'),
+    url('./KazimirTextRBC/KazimirTextRBC-Regular.woff') format('woff'),
+    url('./KazimirTextRBC/KazimirTextRBC-Regular.woff2') format('woff2');
+}
+
+body,
+html {
+  font-family: 'GraphikRBCLC', sans-serif;
+}
+
+button {
+  font: inherit;
+}

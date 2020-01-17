@@ -1,0 +1,12 @@
+.content-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  &--empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+
+.market-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 28px;
+  width: 100%;
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .sub-header {
+    display: block;
+    margin-bottom: 12px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+    width: auto;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    padding: 0 12px;
+    width: 50%;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__category {
+    color: $color-font;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    transition: $transition color ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

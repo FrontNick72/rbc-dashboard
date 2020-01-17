@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.card {
+  border: 1px solid $color-border;
+  background-color: #fff;
+  display: flex;
+  padding: 24px 23px;
+  width: 100%;
+
+  &--colored {
+    background-color: $color-ui;
+  }
+}
